@@ -1,0 +1,299 @@
+/* Variáveis: mudar uma cor aqui atualiza todos os elementos que a usam */
+:root {
+    --ink: #22223b;
+    --ink-muted: #5f5f78;
+    --paper: #fffdf8;
+    --paper-soft: #f3eee6;
+    --accent: #e46f4c;
+    --accent-dark: #bd4e30;
+    --line: #dcd4c7;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--ink);
+    background-color: var(--paper);
+    font-family: "Inter", sans-serif;
+    line-height: 1.65;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Playfair Display", serif;
+}
+
+/* Em links internos, evita que o título fique escondido atrás do cabeçalho sticky */
+section {
+    scroll-margin-top: 5rem;
+}
+
+/* Acessibilidade - o link fica oculto até receber foco via teclado. */
+.skip-link {
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 1100;
+    padding: 0.65rem 0.9rem;
+    color: #ffffff;
+    background-color: var(--ink);
+    border-radius: 0.25rem;
+    transform: translateY(-200%);
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+.site-header {
+    background-color: rgba(255, 253, 248, 0.96);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(8px);
+}
+
+.brand-mark {
+    color: var(--ink);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.brand-mark span,
+.kicker {
+    color: var(--accent);
+}
+
+.navbar-toggler {
+    border-color: var(--line);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(228, 111, 76, 0.25);
+}
+
+.nav-link {
+    color: var(--ink);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--accent-dark);
+}
+
+.btn-ink {
+    color: #ffffff;
+    background-color: var(--ink);
+    border-color: var(--ink);
+}
+
+.btn-ink:hover,
+.btn-ink:focus {
+    color: #ffffff;
+    background-color: var(--accent-dark);
+    border-color: var(--accent-dark);
+}
+
+/* fundo de papel e título grande */
+.hero-section {
+    padding: 8rem 0 5rem;
+    background-color: var(--paper);
+}
+
+.kicker {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    letter-spacing: -0.035em;
+}
+
+h1 {
+    max-width: 48rem;
+    font-size: clamp(3rem, 7vw, 5.7rem);
+    line-height: 0.98;
+}
+
+h1 em {
+    color: var(--accent);
+    font-weight: inherit;
+}
+
+h2 {
+    font-size: clamp(2.15rem, 4vw, 3.5rem);
+    line-height: 1.04;
+}
+
+.hero-text {
+    max-width: 40rem;
+    margin-top: 1.8rem;
+    color: var(--ink-muted);
+    font-size: 1.2rem;
+}
+
+.btn-accent {
+    color: #ffffff;
+    background-color: var(--accent);
+    border-color: var(--accent);
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+    color: #ffffff;
+    background-color: var(--accent-dark);
+    border-color: var(--accent-dark);
+}
+
+.text-link {
+    color: var(--ink);
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    text-underline-offset: 0.3rem;
+}
+
+.text-link:hover,
+.text-link:focus {
+    color: var(--accent-dark);
+}
+
+.hero-figure {
+    padding: 1rem;
+    background-color: var(--paper-soft);
+    border-radius: 50% 50% 45% 45%;
+}
+
+.hero-figure figcaption {
+    margin-top: 0.7rem;
+    color: var(--ink-muted);
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: center;
+}
+
+.section-space {
+    padding: 6rem 0;
+}
+
+.section-paper {
+    background-color: var(--paper-soft);
+}
+
+.intro-copy {
+    max-width: 48rem;
+    color: var(--ink-muted);
+    font-size: 1.12rem;
+}
+
+.intro-copy .lead {
+    color: var(--ink);
+    font-size: 1.45rem;
+}
+
+/* cor e sombra simples para manter o foco no texto */
+.learning-card {
+    background-color: #ffffff;
+    border-top: 5px solid var(--accent) !important;
+    box-shadow: 0 0.5rem 1.5rem rgba(34, 34, 59, 0.06);
+    transition: transform 0.2s ease;
+}
+
+.learning-card:hover {
+    transform: translateY(-0.3rem);
+}
+
+.card-index {
+    color: var(--accent);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.projects-area {
+    background-color: #ffffff;
+}
+
+.project-row {
+    border-top: 1px solid var(--line);
+}
+
+.project-row:last-child {
+    border-bottom: 1px solid var(--line);
+}
+
+.project-number {
+    color: var(--accent);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.contact-area {
+    background-color: #f7b6a6;
+}
+
+.contact-description {
+    max-width: 29rem;
+    color: var(--ink-muted);
+}
+
+.form-control {
+    padding: 0.75rem;
+    border-color: #cdbdb5;
+    border-radius: 0;
+}
+
+.form-control:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 0.25rem rgba(228, 111, 76, 0.18);
+}
+
+.site-footer {
+    color: rgba(255, 255, 255, 0.72);
+    background-color: var(--ink);
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+}
+
+/* No mobile, as colunas dos projetos ficam umas abaixo das outras.
+   Esta regra evita que o gutter vertical da .row aproxime a linha separadora do botão. */
+@media (max-width: 767.98px) {
+    .project-row {
+        --bs-gutter-y: 0;
+    }
+
+    .project-row > .col-12 + .col-12 {
+        margin-top: 1.5rem;
+    }
+}
+
+/* diminui os grandes espaços verticais e mantém a leitura confortável. */
+@media (max-width: 575.98px) {
+    .hero-section {
+        padding-top: 6.5rem;
+    }
+
+    .section-space {
+        padding: 4.25rem 0;
+    }
+}
+
+/* A preferência do sistema por menos movimento é respeitada. */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .learning-card {
+        transition: none;
+    }
+}
